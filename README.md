@@ -28,7 +28,7 @@ The initial purpose of this analysis is to investigate weather patterns on the i
 
     3. With the data frame created, summary statistics can be performed on the temperature column by using "df.describe()". The following summary statistics for the temperatures in the month of June are shown:
 
-![june_temp_stats.png](Images/june_temp_stats.png)
+![june_temp_stats.png](Resources/june_temp_stats.png)
 
 - The second task in completing this analysis is to determine the summary statistics for December. This step follows the same process as the process for June with a few small changes.
     1. To begin this task, a query is once again written to filter out dates. Instead of filtering months June and July of the same year, a filter is placed in December of a year, and January first on the following year. Also, the last data point in the database is from August 23, 2017. With this being said, no data is filtered from December of 2017 as that is beyond the last data point and thus this query has one less filter than the June temps query. 
@@ -50,7 +50,7 @@ The initial purpose of this analysis is to investigate weather patterns on the i
 
     3. With the data frame created, summary statistics can be performed on the temperature column by using "df.describe()". Notice in the following statistics, that the count is lower than the count for June since there is no data for the year of 2017:
 
-![december_temp_stats.png](Images/december_temp_stats.png)
+![december_temp_stats.png](Resources/december_temp_stats.png)
 
 ## Summary 
 Looking at the results of the June and December summary statistics, June has a higher count since there is also data from the year of 2017. With the given summaries, it can be seen that the months of June and December have relatively similar average temperatures with June being around 75 degrees and December being 71 degrees. Their minimum temperatures are the stats that vary most from each other showing that at its lowest, December will get colder. However, given this information on temperature differences I believe that the differences would not affect the business of a shop year-round. The temperatures are very similar and probably would have no impact on business sustainability year-round. 
