@@ -27,8 +27,7 @@ The initial purpose of this analysis is to investigate weather patterns on the i
 
 
     3. With the data frame created, summary statistivcs can be performed on the temperature column by using "df.describe()". The following summary statistics for the temperatures in the month of June are shown:
-
-        ![june_temp_stats.png](Images /june_temp_stats.png)
+![june_temp_stats.png](Images/june_temp_stats.png)
 
 '''
 
