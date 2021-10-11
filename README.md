@@ -22,10 +22,13 @@ The initial purpose of this analysis is to investigate weather patterns on the i
            (Measurement.date >= dt.date(2017, 6, 1)) & (Measurement.date < dt.date(2017, 7, 1))).all()
 
     '''
-    2. Following this the June temperatures are converted into a list. They are converted to a list so that a data frame may be created. A dataframe is then created with the column names "Date" and "June Temps". The Date is set as the index but we set the index to false so that there are not two Date columns in the data frame.  
+    
+    2. Following this the June temperatures are converted into a list. They are converted to a list so that a data frame may be created. A dataframe is then created with the column names "Date" and "June Temps". The Date is set as the index but we set the index to false so that there are not two Date columns in the data frame. 
+
+
     3. With the data frame created, summary statistivcs can be performed on the temperature column by using "df.describe()". The following summary statistics for the temperatures in the month of June are shown:
 
-        ![june_temp_stats.png](Images/june_temp_stats.png)
+        ![june_temp_stats.png](Images /june_temp_stats.png)
 
 '''
 
@@ -39,7 +42,7 @@ The initial purpose of this analysis is to investigate weather patterns on the i
        (Measurement.date >= dt.date(2016, 12, 1)) & (Measurement.date < dt.date(2017, 1, 1))).all()
 '''
 
-![december_temp_stats.png](Images/december_temp_stats.png)
+![december_temp_stats.png](Images /december_temp_stats.png)
 ## Summary 
 Provide a high-level summary of the results- write a report that describes the key differences in weather between June and December and two recommendations for further analysis.
 
