@@ -27,21 +27,31 @@ The initial purpose of this analysis is to investigate weather patterns on the i
 
 
     3. With the data frame created, summary statistivcs can be performed on the temperature column by using "df.describe()". The following summary statistics for the temperatures in the month of June are shown:
+
 ![june_temp_stats.png](Images/june_temp_stats.png)
 
-'''
+- The second task in completing this analysis is to determine the summary statistics for December. This step follows the same process as the process for June with a few small changes.
+    1. To begin this task, a query is once again written to filter out dates however, instead of filtering months June and July of the same year, a filter is placed on December of a year, and January first on the following year. Also, the last data point in the database is from August 23, 2017. With this being said, not data is filtered from December of 2017 as that is beyond the last data point and thus this query has one less filter than the June temps query. 
 
-    temps_december = session.query(Measurement.date, Measurement.tobs).\
-    filter((Measurement.date >= dt.date(2010, 12, 1)) & (Measurement.date < dt.date(2011, 1, 1))|
-       (Measurement.date >= dt.date(2011, 12, 1)) & (Measurement.date < dt.date(2012, 1, 1))|
-       (Measurement.date >= dt.date(2012, 12, 1)) & (Measurement.date < dt.date(2013, 1, 1))|
-       (Measurement.date >= dt.date(2013, 12, 1)) & (Measurement.date < dt.date(2014, 1, 1))|
-       (Measurement.date >= dt.date(2014, 12, 1)) & (Measurement.date < dt.date(2015, 1, 1))|
-       (Measurement.date >= dt.date(2015, 12, 1)) & (Measurement.date < dt.date(2016, 1, 1))|
-       (Measurement.date >= dt.date(2016, 12, 1)) & (Measurement.date < dt.date(2017, 1, 1))).all()
-'''
+    '''
 
-![december_temp_stats.png](Images /december_temp_stats.png)
+        temps_december = session.query(Measurement.date, Measurement.tobs).\
+        filter((Measurement.date >= dt.date(2010, 12, 1)) & (Measurement.date < dt.date(2011, 1, 1))|
+           (Measurement.date >= dt.date(2011, 12, 1)) & (Measurement.date < dt.date(2012, 1, 1))|
+           (Measurement.date >= dt.date(2012, 12, 1)) & (Measurement.date < dt.date(2013, 1, 1))|
+           (Measurement.date >= dt.date(2013, 12, 1)) & (Measurement.date < dt.date(2014, 1, 1))|
+           (Measurement.date >= dt.date(2014, 12, 1)) & (Measurement.date < dt.date(2015, 1, 1))|
+           (Measurement.date >= dt.date(2015, 12, 1)) & (Measurement.date < dt.date(2016, 1, 1))|
+           (Measurement.date >= dt.date(2016, 12, 1)) & (Measurement.date < dt.date(2017, 1, 1))).all()
+    '''
+    
+    2. Following this the December temperatures are converted into a list and a dataframe is then created with the column names "Date" and "December Temps". The Date column is once again set as the index set to false so that there are not two Date columns in the data frame. 
+
+
+    3. With the data frame created, summary statistics can be performed on the temperature column by using "df.describe()". Notice in the following statistics, that the count is lower than the count for June since there is no data for the year of 2017:
+
+![december_temp_stats.png](Images/december_temp_stats.png)
+
 ## Summary 
 Provide a high-level summary of the results- write a report that describes the key differences in weather between June and December and two recommendations for further analysis.
 
